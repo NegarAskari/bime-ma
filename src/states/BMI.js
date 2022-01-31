@@ -4,8 +4,9 @@ import formState from './formState'
 const BMI = selector({
     key: 'BMI',
     get: ({get}) => {
-        const height = get(formState).height
-        const weight = get(formState).weight
+        const form = get(formState)
+        const height = form.height
+        const weight = form.weight
         return (height == 0 ? 0 : weight * 10000 / (height * height))
     }
 })

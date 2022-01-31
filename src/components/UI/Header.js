@@ -1,17 +1,16 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({text}) => {
     return (
-        <h1 style={style}>
-            صدور بیمه‌نامه عمر
-        </h1>
+        <h1 style={style}> {text} </h1>
     )
 }
 
 const style = {
     textAlign:'center',
     color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    WebkitTextStroke: '1px black',
 }
 
 export default Header
